@@ -1,0 +1,30 @@
+#landing_box{
+  margin-top: 20px;
+}
+
+#calendar_icon{
+  color: green;
+  font-size: 100px;
+  text-align: center;
+}
+
+#calendar_tittle{
+  text-align: center;
+}
+
+#calendar_description{
+  text-align: center;
+}
+
+#meeting_icon{
+  color: lightslategray;
+  font-size: 100px;
+  text-align: center;
+}
+#meeting_tittle{
+  text-align: center;
+}
+
+#meeting_description{
+  text-align: center;
+}

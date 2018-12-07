@@ -1,0 +1,73 @@
+<div class="container">
+  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#meeting_schedule_modal">
+    Agendar reunión
+  </button>
+</div>
+
+<div class="modal fade" id="meeting_schedule_modal" tabindex="-1" role="dialog" aria-labelledby="modal_tittle" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header green">
+        <h5 class="modal-tittle" id="modal_tittle">
+          Agendar reunión
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Selector de fecha de la reunion -->
+        <form>
+          <div class="row">
+            <div class="col-md-4 col-sm-12">
+              <div class="form-group">
+                <label for="date"><h5>Fecha</h5></label>
+                <input type="date" class="form-control" [(ngModel)]="form.date" name="date" id="date">
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <div class="form-group">
+                <label for="start_at"><h5>Hora de inicio</h5></label>
+                <input type="time" class="form-control" [(ngModel)]="form.startAt" name="startAt" id="start_at">
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <div class="form-group">
+                <label for="finish_at"><h5>Hora de termino</h5></label>
+                <input type="time" class="form-control" [(ngModel)]="form.finishAt" name="finishAt" id="finish_at">
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <!-- Fin selector de fecha de la reunion -->
+
+        <hr>
+
+        <div class="row">
+          <!-- Busqueda de usuarios -->
+          <div class="col-md-6 col-sm-12">
+            <app-user-finder
+            (selectedUser)="onSelectedUser($event)"
+            ></app-user-finder>
+          </div>
+          <!-- Fin de la busqueda de usuarios -->
+
+          <!-- Inicio seccion disponibilidad usuarios seleccionados -->
+          <div class="col-md-6 col-sm-12">
+            <app-availability-verifier 
+            [userToVerify]="selected_User"
+            [dateForm]="form"
+            (usersForMeeting)="setUsersToInvite($event)"
+            ></app-availability-verifier>
+          </div>
+          <!-- Fin seccion disponibilidad usuarios seleccionados -->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-success" (click)="schedule()">Agendar</button>
+      </div>
+    </div>
+  </div>
+</div>

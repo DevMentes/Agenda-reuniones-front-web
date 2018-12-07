@@ -1,0 +1,9 @@
+header{
+  height: 150px;
+  border-bottom: rgb(209, 209, 209) 1px solid;
+}
+
+#logo{
+  height: 150px;
+  width: 300px;
+}

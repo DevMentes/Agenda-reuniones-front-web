@@ -1,0 +1,29 @@
+.required_mark{
+    color: red;
+  }
+  
+  .required-message{
+    text-align: left;
+  }
+  
+  #register_box{
+    border: rgb(209, 209, 209) 1px solid;
+    border-radius: 10px;
+    width: 400px;
+    padding: 20px;
+    margin:auto;
+  }
+  
+  #register_form{
+    margin: 5px;
+  }
+  
+  #form_tittle{
+    text-align: center;
+  }
+  
+  #register_button{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  

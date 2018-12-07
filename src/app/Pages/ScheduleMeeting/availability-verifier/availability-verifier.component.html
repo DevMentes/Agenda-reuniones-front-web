@@ -1,0 +1,9 @@
+<label for="selected_users"><h5>Disponibilidad usuarios seleccionados</h5></label>
+<div id="selected_users">
+    <div class="list-group-flush" style="max-height: 250px; overflow: auto;">
+        <app-user-availability
+        *ngFor="let userAvailability of usersAvailabilities"
+        [userAvailability]="userAvailability"
+        ></app-user-availability>
+    </div>
+</div>

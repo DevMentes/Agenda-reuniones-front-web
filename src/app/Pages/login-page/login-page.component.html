@@ -1,0 +1,49 @@
+<div id="authentication_box">
+  <h3 id="form_tittle">Iniciar sesión</h3>
+  <span id="explanatory_message">
+                        <small class="form-text text-muted">
+                            Para acceder a tu cuenta debes contar con tu correo y contraseña.
+                        </small>
+                    </span>
+  <form id="authentication_form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+    <div class="form-group">
+      <label for="email">Correo</label>
+      <input type="email" 
+      class="form-control" 
+      name="email"
+      placeholder="Tu correo"
+      [(ngModel)]="model.email"
+      #email="ngModel"
+      [ngClass]="{'is-invalid':f.submitted && email.invalid}"
+      required
+      email 
+      >
+      <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+        <div *ngIf="email.errors.required">Correo electrónico es requerido.</div>
+        <div *ngIf="email.errors.email">El email debe ser válido.</div>
+      </div>
+
+    </div>
+    <div class="form-group">
+      <label for="password">Constraseña</label>
+      <input type="password" 
+      name="password" 
+      class="form-control"
+      placeholder="Contraseña"
+      [(ngModel)]="model.password"
+      #password="ngModel"
+      [ngClass]="{'is-invalid':f.submitted && password.invalid}"
+      required
+      minlength="8"
+      >
+      <div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
+        <div *ngIf="password.errors.required">La contraseña es requerida.</div>
+        <div *ngIf="password.errors.minlength">La contraseña debe tener un mínimo de 8 carácteres.</div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-success">Iniciar sesión</button>
+  </form>
+  <div *ngIf="errors.length > 0" class="alert alert-danger" role="alert">
+      <p *ngFor="let error of errors">-{{error}}</p>
+  </div>
+</div>

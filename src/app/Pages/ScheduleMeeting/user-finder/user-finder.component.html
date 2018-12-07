@@ -1,0 +1,15 @@
+<input type="text" class="form-control"
+placeholder="Buscar usuario"
+id="search-box" 
+name="searchQuery"
+(keyup)="search(searchQuery.value)"
+#searchQuery
+/>
+
+<div class="list-group-flush" style="max-height: 200px; overflow: auto;">
+  <app-founded-user *ngFor="let user of users"
+  [user]="user"
+  (selected)="onSelectedUser($event)"
+  ></app-founded-user>
+  
+</div>
