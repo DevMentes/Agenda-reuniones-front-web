@@ -1,35 +1,48 @@
-# CalendarioAPP
+AgendaReunionesCiisa-Front
+Este proyecto contiene el frontend para la agenda de reuniones de ciisa
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
+Requisitos:
 
-## Install APP
+-Node js 10 +
 
-Recuerda que luego de descargar o clonar el proyecto debes pararte en tu proyecto en la terminal y ejecutar:
+-Npm 6.4 +
 
-`npm install`
+-Git
 
-## Development server
+Instalación:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+*Nota: El proyecto se encuentra en fase de desarrollo y este es solo un MVP, por lo que el siguiente manual está enfocado para la realización de pruebas o para que puedas desarrollar por tu cuenta. Para el manual de instalación para configurar el proyecto en entorno de producción, deberás esperar la primera versión estable del proyecto que será lanzado prontamente.
 
-## Code scaffolding
+Preparando el proyecto.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Antes de comenzar con este apartado, asegurate de tener instalados los requisitos minímos para el proyecto que están declarados en la sección de "Requisitos", una vez tengas todos los requisitos, prosigue con esta sección.
 
-## Build
+Obtener una copia del proyecto:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Lo primero que debes hacer es clonar o descargar el proyecto, debes acceder a él mediante el siguiente compando en consola:
 
-## Running unit tests
+git clone https://github.com/GetColors/Agenda-reuniones-api.git
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Una vez hayas clonado el proyecto ya cuentas con el código fuente del proyecto, por lo que ya podemos comenzar con los preparativos.
 
-## Running end-to-end tests
+Instalando el proyecto:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Para realizar la instalación del proyecto, contamos con la ayuda de npm para gestionar las dependencias, por lo que se encargará de realizar casi todo el trabajo por nosotros. Debes situarte dentro de el directorio raíz del proyecto (donde está ubicado el archivo package.json), una vez dentro del directorio debes ejecutar el siguiente comando en la consola:
 
-## Further help
+npm install
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Debes contar con una conexión a internet para realizar ésto, puesto que npm debe descargar las dependencias requeridas por el proyecto para llevar a cabo su correcto funcionamiento. Una vez ejecutes el comando, npm comenzará a descargar todas las dependencias y las guardará en una carpeta "vendor" que se ubicará automáticamente en la raíz del proyecto, por lo que no debes realizar nada más que esperar a que finalice.
 
-# calendario-ciisa-18
+Ejecutar la aplicación:
+
+Con los pasos anteriores ya has terminado de preparar y configurar el proyecto, por lo que puedes ejecutarlo, para ello, solo ejecuta dentro del directorio raíz del proyecto el siguiente comando:
+
+ng serve -o
+
+Con esto se abrirá la aplicación en el navegador de internet, por lo que ya puedes usarla. 
+
+Puedes utilizar el usuario de pruebas creado en el backend (ver proyecto de la api) para acceder a la aplicación.
+
+El usuario por defecto es admin@email.com y su contraseña es 00000000  
+
+
